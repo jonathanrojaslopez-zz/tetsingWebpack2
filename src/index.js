@@ -1,16 +1,14 @@
 
 /*import React from 'react';
 import ReactDOM from 'react-dom';
-*/import _ from 'lodash';
-import css from './index.css'
+*/
+import _ from 'lodash';
+import css from './index.scss'
 
-function component () {
-  var element = document.createElement('div');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack','Dude'], ' ');
-
-  return element;
-}
-
-document.body.appendChild(component());
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
