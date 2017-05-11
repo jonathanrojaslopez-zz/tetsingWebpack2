@@ -34,7 +34,7 @@ module.exports = {
         use: cssConfig
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
@@ -60,7 +60,8 @@ module.exports = {
     hot: true,
     open: true
   },
-  devtool: "#inline-source-map",
+  devtool: isProd ? 'hidden-source-map' : 'cheap-eval-source-map',
+  //devtool: "#inline-source-map",
   plugins: [
     new HtmlWebpackPlugin({
       title: 'My App Test',
