@@ -1,16 +1,25 @@
 
 /*import React from 'react';
 import ReactDOM from 'react-dom';
-*/import _ from 'lodash';
-import css from './index.css'
+*/
+//import _ from 'lodash';
+import css from './index.scss';
+import Button from './components/Atoms/button';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-function component () {
-  var element = document.createElement('div');
-
-  /* lodash is required for the next line to work */
-  element.innerHTML = _.join(['Hello','webpack','Dude'], ' ');
-
-  return element;
+const esTest = () => {
+	console.log(`hi dude hre`)
 }
 
-document.body.appendChild(component());
+esTest()
+
+/*ReactDOM.render(
+  <h1>Hello, world here!</h1>,
+  document.getElementById('root')
+);*/
+
+ReactDOM.render(
+  <Button/>,
+  document.getElementById('root')
+);
