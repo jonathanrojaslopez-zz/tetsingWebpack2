@@ -7,7 +7,6 @@ class Button extends React.Component {
 	}
 
 	render(){
-		debugger
 		return(
 			<div>
 				<button onClick={()=> this.handleVar() }>botonsillito</button>
